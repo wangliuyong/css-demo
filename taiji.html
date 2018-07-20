@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+  <title>太极</title>
+ </head>
+ <body>
+ <style type="text/css">
+  #taiji{
+  margin:auto;
+  width:0;
+  height:300px;
+  border-left:150px solid #fff;
+  border-right:150px solid #000;
+  box-shadow: 0 0 20px 0 #333;
+  border-radius:100%;
+  }
+  #yin{
+  position:absolute;
+  margin:150px 0 0 -75px;
+  width:150px;
+  height:150px;
+  border-radius:100%;
+  background:#000;
+  }
+  #yin:after{
+  position:absolute;
+  margin:50px 0 0 50px;
+  content:" ";
+  width:50px;
+  height:50px;
+  border-radius:100%;
+  background:#fff;
+  }
+  #yang{
+  position:absolute;
+  margin:0 0 0 -75px;
+  width:150px;
+  height:150px;
+  border-radius:100%;
+  background:#fff;
+  }
+  #yang:after{
+  position:absolute;
+  margin:50px 0 0 50px;
+  content:" ";
+  width:50px;
+  height:50px;
+  border-radius:100%;
+  background:#000;
+  }
+ </style>
+ <div id="taiji">
+  <div id="yin"></div>
+  <div id="yang"></div>
+ </div>
+ </body>
+ </html>
