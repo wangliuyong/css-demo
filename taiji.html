@@ -4,63 +4,72 @@
 <head>
     <title>太极</title>
 </head>
+<style type="text/css">
+    #taiji {
+        margin: 100px auto;
+        position: relative;
+        width: 0;
+        height: 300px;
+        border-left: 150px solid #fff;
+        border-right: 150px solid #000;
+        border-radius: 100%;
+        animation-duration: 1s;
+        animation-name: spin;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
 
-<body>
-    <style type="text/css">
-        #taiji {
-            margin: 100px auto;
-            position: relative;
-            width: 0;
-            height: 300px;
-            border-left: 150px solid #fff;
-            border-right: 150px solid #000;
-            border-radius: 100%;
-            animation-duration: 1s;
-            animation-name: spin;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
+    #taiji::before {
+        position: absolute;
+        left: -75px;
+        top: 0;
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border-radius: 50%;
+        border: 50px solid #000;
+    }
+
+    #taiji::after {
+        position: absolute;
+        right: -75px;
+        top: 150px;
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: #000;
+        border-radius: 50%;
+        border: 50px solid #fff;
+    }
+
+    /*添加动画*/
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
         }
-
-        #taiji::before {
-            position: absolute;
-            left: -75px;
-            top: 0;
-            content: '';
-            display: block;
-            width: 50px;
-            height: 50px;
-            background: #fff;
-            border-radius: 50%;
-            border: 50px solid #000;
+        to {
+            transform: rotate(360deg);
         }
-
-        #taiji::after {
-            position: absolute;
-            right: -75px;
-            top: 150px;
-            content: '';
-            display: block;
-            width: 50px;
-            height: 50px;
-            background: #000;
-            border-radius: 50%;
-            border: 50px solid #fff;
-        }
-
-        /*添加动画*/
-
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-    <div id="taiji">
-
-    </div>
+    }
+    .background{
+        position: fixed;
+        top: 50px;
+        left: 50%;
+        margin-left: -250px;
+        width: 500px;
+        height: 500px;
+        background:#ccc;
+    }
+</style>
+<div class="background"></div>
+<body>  
+<div class="background">
+    <div id="taiji"></div>
+</div>
 </body>
 
 </html>
